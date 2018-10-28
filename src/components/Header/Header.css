@@ -1,0 +1,12 @@
+.Header {
+    
+}
+
+.Header .title {
+    margin: 0 !important; /** override **/
+    color: #4a4848;
+}
+
+.Header .subTitle {
+    text-align: left;
+}

@@ -1,0 +1,35 @@
+.ProductCard {
+    margin: 1em;
+}
+
+.ProductCard .card {
+    width: 288px;
+    height: 350px;
+}
+
+.ProductCard .card-footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductCard .card-footer-item p {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 3px 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.ProductCard .title {
+	color: #8a8686;
+    font-weight: 600;
+}
+.ProductCard .description {
+	color: #8a7f7f;
+	font-weight: 400;
+}
+.ProductCard .price {
+	color: #1f1e1e;
+	font-weight: 700;
+}
+

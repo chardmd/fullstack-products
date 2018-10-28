@@ -1,0 +1,30 @@
+.ProductList {
+    margin: 0 1em;
+    height: 100vh;
+}
+
+.ProductList .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.ProductList .divider {
+    background-color: #dbdbdb;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 0 1em;
+}
+
+.ProductList .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ProductList .bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 3em 3em 2em;
+}

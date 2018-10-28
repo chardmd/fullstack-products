@@ -1,0 +1,51 @@
+{
+  "name": "fullstack-products",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monolith React / Node Demo - Product List",
+  "main": "index.js",
+  "author": "Richard Dimalanta <richard@chardmd.com> (https://www.chardmd.com)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "bulma": "^0.7.2",
+    "connected-react-router": "^4.5.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "history": "^4.7.2",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-js-pagination": "^3.0.2",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.1.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4",
+    "plop": "^2.1.0",
+    "prettier": "^1.14.3",
+    "react-scripts": "^2.0.5",
+    "react-test-renderer": "^16.6.0"
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "build": "react-scripts build && mv build server",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "generate": "plop --plopfile generators/index.js"
+  },
+  "proxy": "http://localhost:3001",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,19 @@
+.Paginate {
+    width: 330px;
+}
+
+
+.Paginate .pagination a {
+    color: #4a4848;
+    font-size: 15px;
+}
+
+.Paginate .pagination .active {
+    border-bottom: 3px solid #4a4848;
+    width: 20px;
+}
+
+.Paginate .pagination .disabled a {
+    color: #bbbbbb;
+    cursor: not-allowed;
+}

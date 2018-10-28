@@ -1,0 +1,35 @@
+.SelectFilter {
+    
+}
+
+.SelectFilter .dropdown-content button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    outline:none;
+}
+
+.SelectFilter > .dropdown-content button:hover,
+button:focus {
+    text-decoration: none;
+}
+
+.SelectFilter select {
+    -webkit-appearance: button;
+    -moz-appearance:none;
+    background-image: url('../../assets/dropdown.png'), -webkit-linear-gradient(#f7f7f7, #f7f7f7 40%, #f7f7f7);
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #4a4848;
+    font-size: inherit;
+    margin-top: 15px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
+    outline: none;
+ }

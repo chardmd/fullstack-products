@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-products",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monolith React / Node Demo - Product List",
+  "main": "index.js",
+  "author": "Richard Dimalanta <richard@chardmd.com> (https://www.chardmd.com)",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "debug": "~2.6.3",
+    "jade": "^1.11.0"
+  },
+  "scripts": {
+    "start": "./server.js"
+  }
+}
