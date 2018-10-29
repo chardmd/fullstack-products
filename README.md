@@ -2,6 +2,12 @@
 
 > A simple product listing app using React/Redux utilising Node.JS as backend API. (Monolith approach)
 
+## QuickStart
+
+1. Make sure that you have Node.js and Yarn installed
+2. Clone this repo using git clone --depth=1 https://github.com/chardmd/fullstack-products <YOUR_PROJECT_NAME>
+3. Move to the appropriate directory: cd <YOUR_PROJECT_NAME>.
+
 ## Running the App
 
 This should automatically run both the `server` and the `client`. I took advantage of [concurrently](https://www.npmjs.com/package/concurrently) module for running multiple commands at the same time.
