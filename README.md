@@ -37,6 +37,7 @@ yarn test
 * Code Best Practices
 * Test Coverage using Jest
 * ES6+
+* Dockerised app
 
 #### Bonus
 
