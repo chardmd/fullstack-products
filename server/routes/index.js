@@ -4,8 +4,8 @@ import products from "../data/products.json";
 const router = express.Router();
 
 router.get("/products", (req, res, next) => {
-  let page = parseInt(req.query.page, 10);
-  const limit = parseInt(req.query.limit, 10);
+  let page = parseInt(req.query.page, 10) || 1;
+  const limit = parseInt(req.query.limit, 10) || 1000;
   const pageCount = Math.ceil(products.length / limit);
   if (!page) {
     page = 1;
