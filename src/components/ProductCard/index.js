@@ -17,7 +17,7 @@ class ProductCard extends React.Component {
         <div className="card">
           <div className="card-content">
             <figure className="image is-4by3">
-              <img src={imageUrl} alt="product" />
+              <img src={imageUrl} alt="product" className="imageUrl" />
             </figure>
           </div>
           <footer className="card-footer">
