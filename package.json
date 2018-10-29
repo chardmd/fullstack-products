@@ -42,7 +42,7 @@
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"nodemon --exec babel-node server/server.js\"",
     "build": "react-scripts build && mv build server",
-    "test": "react-scripts test --env=jsdom --verbose --watchAll",
+    "test": "react-scripts test --env=jsdom --verbose --watchAll --coverage",
     "eject": "react-scripts eject",
     "generate": "plop --plopfile generators/index.js"
   },
