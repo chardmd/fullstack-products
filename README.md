@@ -49,7 +49,7 @@ yarn test
 
 This folder contains the Node.JS backend API. Implemented [express](https://expressjs.com/) as primary framework for creating the Rest endpoints.
 
-`[GET] api/products` - Returns a list of products and supports the following parameters: 
+`[GET] api/products` - Returns a list of products and supports these optional parameters: 
 `page` and `limit`.
 
 Sample usage:
