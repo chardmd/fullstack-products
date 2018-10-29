@@ -1,8 +1,9 @@
-var express = require("express");
-var router = express.Router();
-var products = require("../data/products.json");
+import express from "express";
+import products from "../data/products.json";
 
-router.get("/products", function(req, res, next) {
+const router = express.Router();
+
+router.get("/products", (req, res, next) => {
   let page = parseInt(req.query.page, 10);
   const limit = parseInt(req.query.limit, 10);
   const pageCount = Math.ceil(products.length / limit);
