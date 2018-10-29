@@ -16,7 +16,7 @@ function* handleGetProducts(action) {
     const { pageNumber, limit } = action;
     const URL = `/api/products?page=${pageNumber}&limit=${limit}`;
     const response = yield call([axios, axios.get], URL);
-    yield put(push(`/${pageNumber}`));
+    yield put(push(`/${pageNumber}?filter=${limit}`));
     yield put(getProductsSuccess(response.data));
   } catch (e) {
     yield put(getProductsFailed(e));

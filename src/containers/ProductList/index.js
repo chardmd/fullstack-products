@@ -6,6 +6,7 @@
 
 import React from "react";
 import { connect } from "react-redux";
+import parseQueryString from "query-string";
 import { getProducts } from "./actions";
 import "./ProductList.css";
 
@@ -15,14 +16,30 @@ import SelectFilter from "../../components/SelectFilter";
 import ProductCard from "../../components/ProductCard";
 import Paginate from "../../components/Paginate";
 export class ProductList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.getFilterParam = this.getFilterParam.bind(this);
+  }
+
+  getFilterParam() {
+    const queryString = this.props.location.search;
+    const queryParams = parseQueryString.parse(queryString);
+    const filter = isNaN(queryParams.filter)
+      ? this.props.limit
+      : queryParams.filter;
+    return filter;
+  }
+
   componentDidMount() {
-    const { limit, activePage } = this.props;
-    const pageNumber = this.props.match.params.pageNumber || activePage;
-    this.props.onGetProducts(pageNumber, limit);
+    const pageNumber =
+      this.props.match.params.pageNumber || this.props.activePage;
+    const filter = this.getFilterParam();
+    this.props.onGetProducts(pageNumber, filter);
   }
 
   render() {
-    const { products, totalCount, activePage, limit } = this.props;
+    const { products, totalCount, activePage } = this.props;
+    const filter = this.getFilterParam();
     return (
       <div className="ProductList container">
         <div className="header">
@@ -30,7 +47,8 @@ export class ProductList extends React.Component {
           <div>
             <SelectFilter
               onGetData={this.props.onGetProducts}
-              activePage={activePage}
+              filter={parseInt(filter, 10)}
+              selectedValue={activePage}
             />
           </div>
         </div>
@@ -50,7 +68,7 @@ export class ProductList extends React.Component {
           <Paginate
             totalItemsCount={totalCount}
             activePage={activePage}
-            itemsCountPerPage={limit}
+            itemsCountPerPage={parseInt(filter, 10)}
             onGetData={this.props.onGetProducts}
           />
         </div>

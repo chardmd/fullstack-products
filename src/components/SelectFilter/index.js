@@ -13,19 +13,19 @@ class SelectFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filter: 8,
+      filter: props.filter,
     };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    const activePage = this.props.activePage;
+    const selectedValue = this.props.selectedValue;
     const limit = parseInt(e.target.value, 10);
     this.setState(
       {
         filter: limit,
       },
       () => {
-        this.props.onGetData(activePage, limit);
+        this.props.onGetData(selectedValue, limit);
       }
     );
   }
@@ -45,6 +45,8 @@ class SelectFilter extends React.Component {
 
 SelectFilter.propTypes = {
   onGetData: PropTypes.func.isRequired,
+  filter: PropTypes.number,
+  selectedValue: PropTypes.number,
 };
 
 export default SelectFilter;
