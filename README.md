@@ -25,10 +25,10 @@ yarn test
 #### Features
 
 * Redux for managing application state
-* React Router 4 - Used for navigating pages
+* React Router 4 - Used for navigating page numbers and container routes
 * Good components structure - Utilising components / containers approach
 * Responsive
-* Good code quality
+* Code Best Practices
 * Test Coverage using Jest
 * ES6+
 
