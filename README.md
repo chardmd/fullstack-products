@@ -93,6 +93,23 @@ response:
 * ES6+ Babel Setup
 * Configurable Server
 
+## Dockerizing the App
+
+Build and tag the docker image:
+
+`docker build -t fullstack-products .`
+
+Spin up the container:
+
+`docker run -it \
+  -v ${PWD}:/usr/src/app \
+  -v /usr/src/app/node_modules \
+  -p 3000:3000 \
+  --rm \
+  fullstack-products`
+
+  Once the server is up, Open your browser to [http://localhost:3000](http://localhost:3000)
+
 ## Preview
 
 ![Alt Text](screenshot.png)
