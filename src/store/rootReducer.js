@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import productList from "../containers/ProductList/reducer";
+import productListReducer from "../containers/ProductList/reducer";
 
 const mainReducer = combineReducers({
-  productList: productList,
+  productList: productListReducer,
 });
 
 const rootReducer = (state, action) => mainReducer(state, action);
