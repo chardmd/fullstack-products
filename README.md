@@ -89,7 +89,6 @@ response:
 #### Features
 
 * RESTful endpoints
-* Test Coverage
 * Express
 * ES6+ Babel Setup
 * Configurable Server
